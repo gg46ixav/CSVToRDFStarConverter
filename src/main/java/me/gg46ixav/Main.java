@@ -147,7 +147,7 @@ public class Main {
                                         SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
                                         Date d = new Date();
                                         d.setTime(Long.parseLong(propertyValue));
-                                        literal = STR."\"\{propertyValue}\"^^<\{XSDDatatype.XSDdateTime.getURI()}>";
+                                        literal = STR."\"\{DATE_FORMAT.format(d)}\"^^<\{XSDDatatype.XSDdateTime.getURI()}>";
                                         break;
                                     default:
                                         literal = STR."\"\{propertyValue}\"";
